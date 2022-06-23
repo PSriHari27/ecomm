@@ -17,16 +17,6 @@ pipeline
                 git 'https://github.com/PSriHari27/ecomm.git'
             }
         }
-        stage('compile')
-        {
-            agent {label 'Linux_Slave'}
-            steps
-            {
-                
-                echo 'compiling the code'
-                sh 'mvn compile'
-            }
-        }
         stage('package')
         {
             agent{label 'Linux_Slave'}
